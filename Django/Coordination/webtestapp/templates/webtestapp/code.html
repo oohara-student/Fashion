@@ -1,0 +1,82 @@
+{% load static%}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/code.css" %}"/>
+    <title>コーディネート確認</title>
+  </head>
+  <h1>コーディネート確認</h1>
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"></label>
+<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"><span></span></label>
+<div class="drawer-menu">
+  <ul>
+    <li><a href="{% url 'webtestapp:code' %}">コーディネート確認</a></li>
+    <li><a href="{% url 'webtestapp:okiniiri' %}">お気に入りコーディネート</a></li>
+    <li><a href="{% url 'webtestapp:sakujo' %}">削除したコーディネート</a></li> 
+  </ul>
+  <a href="{% url 'webtestapp:help' %}"><img src="{% static "images/ガイド.png" %}"  alt="ガイドボタン" style="widh: 150px;" height="150"></a>
+</div>
+<label for="menu-toggle" class="menu-background"></label>
+  <form action="#" method="post">
+  <body>
+    <p>コーディネート一覧</p>
+    <table class="gazou1">
+      <tr>
+        <td><img src="{% static "images/tops_0.jpg" %}"  alt="" ></td>
+        <td><img src="{% static "images/outer_0.jpg" %}"  alt="" ></td>
+        <td><img src="{% static "images/pants_1.jpg" %}"  alt="" ></td>
+      </tr>
+    </table>
+    <table class="gazou2">
+      <tr>
+        <td><img src="{% static "images/top3.jpeg" %}"  alt="" ></td>
+        <td> <img src="{% static "images/6.jpg" %}"  alt="" ></td>
+        <td> <img src="{% static "images/au3.jpeg" %}"  alt="" ></td>
+      </tr>
+    </table>
+    <table class="gazou3">
+      <tr>
+        <td><img src="{% static "images/top3.jpeg" %}"  alt="" ></td>
+        <td><img src="{% static "images/outer_1.jpg" %}"  alt="" ></td>
+        <td> <img src="{% static "images/画像 -20220206-231602-0aac21c0.jpeg" %}"  alt="" ></td>
+      </tr>
+    </table>
+    <table class="gazou4">
+      <tr>
+        <td><img src="{% static "images/1.jpeg" %}"  alt="" ></td>
+        <td><img src="{% static "images/画像 -20220206-231759-7fc7e8fa.jpeg" %}"  alt="" ></td>
+        <td><img src="{% static "images/3.jpeg" %}"  alt="" ></td>
+      </tr>
+    </table>
+    <table class="gazou5">
+      <tr>
+        <td><img src="{% static "images/画像 -20220208-004043-2dad36f7.jpeg" %}"  alt="" ></td>
+        <td><img src="{% static "images/画像 -20220208-004252-3e9053c3.jpeg" %}"  alt="" ></td>
+        <td><img src="{% static "images/1121019_v01_h1.webp" %}"  alt="" ></td>
+      </tr>
+    </table>
+    <div class="batsu1">×</div>
+    <div class="batsu2">×</div>
+    <div class="batsu3">×</div>
+    <div class="batsu4">×</div>
+    <div class="batsu5">×</div>
+    <footer>
+      <p>
+        <a href="{% url 'webtestapp:tuika' %}">追加</a>
+      </P>
+    <div id="menu-box" class="menu">
+      <ul>
+        <li><a href="{% url 'webtestapp:calendar' %}">カレンダー</a></li>
+        <li><a href="{% url 'webtestapp:closet' %}">クローゼット</a></li>
+        <li> <a href="{% url 'webtestapp:index' %}">ホーム</a></li>
+        <li><a href="{% url 'webtestapp:timeline' %}">タイムライン</a></li>
+        <li><a href="{% url 'webtestapp:settei' %}">設定</a></li>
+      </ul>
+    </div>
+  </footer>
+  </body>
+</form>
+</html>

@@ -1,0 +1,64 @@
+{% load static%}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/timelinew.css" %}"/>
+    <title>タイムライン</title>
+  </head>
+  <h1>タイムライン</h1>
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"></label>
+<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"><span></span></label>
+<div class="drawer-menu">
+  <ul>
+    <li><a href="{% url 'webtestapp:code' %}">コーディネート確認</a></li>
+    <li><a href="{% url 'webtestapp:okiniiri' %}">お気に入りコーディネート</a></li>
+    <li><a href="{% url 'webtestapp:sakujo' %}">削除したコーディネート</a></li> 
+  </ul>
+  <a href="{% url 'webtestapp:help' %}"><img src="{% static "images/ガイド.png" %}"  alt="ガイドボタン" style="widh: 150px;" height="150"></a>
+</div>
+<label for="menu-toggle" class="menu-background"></label>
+  <form action="#" method="post">
+  <body>
+    <div class="seibetu">
+        <ul>
+          <li class="man"><a href="{% url 'webtestapp:timeline' %}">man</a></li>
+          <li class="woman"><a href="{% url 'webtestapp:timelinew' %}">woman</a></li>
+        </ul>
+      </div>
+      <div class="toukou">
+        <a href="{% url 'webtestapp:toukou' %}">投稿</a>
+        </div>
+        <p>みんなのコーデ</p>
+        <table class="gazou1">
+          <tr>
+            <td><img src="{% static "images/ファッションw1.jpg" %}"  alt="" ></td>
+            <td><img src="{% static "images/ファッションw2.jpg" %}"  alt="" ></td>
+            <td><img src="{% static "images/ファッションw3.jpg" %}"  alt="" ></td>
+          </tr>
+        </table>
+        <br>
+        <table class="gazou2">
+          <tr>
+            <td><img src="{% static "images/timelinew4.jpg" %}"  alt="" ></td>
+            <td><img src="{% static "images/timeline5.jpg" %}"  alt="" ></td>
+            <td><img src="{% static "images/timelinew6.jpg" %}"  alt="" ></td>
+          </tr>
+        </table>
+        <div class="next">
+        <a onclick="window.location.reload(true);"><img src="{% static "images/next.png" %}"  alt="更新ボタン" style="widh: 130px;" height="130"></a>
+        </div>
+    <div id="menu-box" class="menu">
+      <ul>
+        <li><a href="{% url 'webtestapp:calendar' %}">カレンダー</a></li>
+        <li><a href="{% url 'webtestapp:closet' %}">クローゼット</a></li>
+        <li> <a href="{% url 'webtestapp:index' %}">ホーム</a></li>
+        <li><a href="{% url 'webtestapp:timeline' %}">タイムライン</a></li>
+        <li><a href="{% url 'webtestapp:settei' %}">設定</a></li>
+      </ul>
+    </div>
+  </body>
+</form>
+</html>

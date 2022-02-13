@@ -1,0 +1,106 @@
+{% load static%}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/home.css" %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="{% static 'javascript/home.js' %}"></script>
+    <title>ホーム</title>
+  </head>
+  <h1>home</h1>
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"></label>
+<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"><span></span></label>
+<div class="drawer-menu">
+  <ul>
+    <li><a href="{% url 'webtestapp:code' %}">コーディネート確認</a></li>
+    <li><a href="{% url 'webtestapp:okiniiri' %}">お気に入りコーディネート</a></li>
+    <li><a href="{% url 'webtestapp:sakujo' %}">削除したコーディネート</a></li> 
+  </ul>
+  <a href="{% url 'webtestapp:help' %}"><img src="{% static "images/ガイド.png" %}"  alt="ガイドボタン" style="widh: 150px;" height="150"></a>
+  <p><a onclick="window.location.reload(true);"><img src="{% static "images/更新ボタン.png" %}"  alt="更新ボタン" style="widh: 130px;" height="130"></a></p>
+</div>
+<label for="menu-toggle" class="menu-background"></label>
+  <form action="#" method="post">
+  <body>
+    <div class="home" id="homu-menu1">
+      <table>
+        <tr>
+          <td>
+            <span style="display: block; border: 2px solid #000000 ;background-color:#fff">トップス</span>
+          </td>
+          <td>
+            <span style="display: block; border: 2px solid #000000 ;background-color:#fff">アウター</span>
+          </td>
+        </tr>
+        <tr>
+          <!--トップス-->
+          <td>
+            {% for home in tops %}
+              {% if forloop.counter == tops_num %}
+                <img src={{test}}{{home.image}}>
+              {% endif %}
+            {% endfor %}
+          </td>
+          <!--アウター-->
+          <td>
+            {% for home in outer %}
+              {% if forloop.counter == outer_num %}
+                <img src={{test}}{{home.image}}>
+              {% endif %}
+            {% endfor %}
+          </td>
+        </tr>
+      </table>
+    </div>
+      <div class="home" id="homu-menu2">
+        <table>
+          <td>
+            <span style="display: block; border: 2px solid #000000 ;background-color:#fff">パンツ</span>
+          </td>
+          <tr>
+            <!--パンツ-->
+          <td>
+            {% for home in pants %}
+              {% if forloop.counter == pants_num %}
+                <img src={{test}}{{home.image}}>
+              {% endif %}
+            {% endfor %}
+          </td>
+          </tr>
+        </table>
+      </div>
+    <div class="article">
+      <p>
+        場所:<span id="place"></span>
+        <br>
+        今日の天気:<span id="weather"></span>
+        <br>
+        気温:<span id="temp"></span>℃
+        <br>
+        <img id="icon">
+        <br>
+        ひとこと
+        <br>
+       今日は寒いのでヒートテックなどを追加で着て温かくしよう！！
+      </P>
+    </div>
+    <footer>
+      <p>
+        <a href="{% url 'webtestapp:clothes_register' %}"><img src="{% static "images/追加ボタン.png" %}"  alt="追加ボタン" style="widh: 100px;" height="100"></a>
+      </P>
+    <div id="menu-box" class="menu">
+      <ul>
+      <li><a href="{% url 'webtestapp:calendar' %}">カレンダー</a></li>
+      <li><a href="{% url 'webtestapp:closet' %}">クローゼット</a></li>
+      <li> <a href="{% url 'webtestapp:index' %}">ホーム</a></li>
+      <li><a href="{% url 'webtestapp:timeline' %}">タイムライン</a></li>
+      <li><a href="{% url 'webtestapp:settei' %}">設定</a></li>
+      </ul>
+    </div>
+  </footer>
+  </body>
+</form>
+</html>

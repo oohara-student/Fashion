@@ -1,0 +1,165 @@
+{% load static%}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/closet.css" %}"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'javascript/クローゼット.js' %}"></script>
+    <title>クローゼット</title>
+
+  </head>
+  <h1>closet</h1>
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"></label>
+<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"><span></span></label>
+<div class="drawer-menu">
+  <ul>
+    <li><a href="{% url 'webtestapp:code' %}">コーディネート確認</a></li>
+    <li><a href="{% url 'webtestapp:okiniiri' %}">お気に入りコーディネート</a></li>
+    <li><a href="{% url 'webtestapp:sakujo' %}">削除したコーディネート</a></li> 
+  </ul>
+  <a href="{% url 'webtestapp:help' %}"><img src="{% static "images/ガイド.png" %}"  alt="ガイドボタン" style="widh: 150px;" height="150"></a>
+</div>
+<label for="menu-toggle" class="menu-background"></label>
+<div class="closet-menu">
+      <select id="clothes-select" name="clothes"  style="text-align:center;">
+          <option value=""></option>
+          <optgroup label="トップス">
+              <option value="#1" >半袖</option>
+              <option value="#2">長袖</option>
+              <option value="#3">パーカー</option>
+              <option value="#4">セーター</option>
+          <optgroup label="アウター">
+              <option value="#5">半袖シャツ</option>
+              <option value="#6">長袖シャツ</option>
+              <option value="#7">パーカー(チャックあり)</option>
+              <option value="#8">コート</option>
+              <option value="#9">ダウンジャケット</option>
+          <optgroup label="パンツ">
+              <option value="#10">半ズボン</option>
+              <option value="#11">長ズボン</option>
+      </select>
+      <img src="{% static "images/削除ボタン.jpg" %}"  alt="削除ボタン" style="widh: 50px;" height="50"><br>
+ </div>
+  <form action="#" method="post">
+  <body>
+    <input id="acd-check1" class="acd-check" type="checkbox" checked="checked" >
+<label class="acd-label" for="acd-check1">半袖</label>
+<div id="1" class="acd-content">
+  <p>
+    {% for closet in short_sleeves %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+<input id="acd-check2" class="acd-check" type="checkbox" checked="checked">
+<label class="acd-label" for="acd-check2">長袖</label>
+<div id="2" class="acd-content">
+  <p>
+    {% for closet in long_sleeves %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+<input id="acd-check3" class="acd-check" type="checkbox" checked="checked">
+<label class="acd-label" for="acd-check3">パーカー</label>
+<div id="3" class="acd-content">
+  <p>
+    {% for closet in parker %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+<input id="acd-check4" class="acd-check" type="checkbox" checked="checked">
+<label class="acd-label" for="acd-check4">セーター</label>
+<div id="4" class="acd-content">
+  <p>
+    {% for closet in sweater %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+<input id="acd-check5" class="acd-check" type="checkbox" checked="checked">
+<label class="acd-label" for="acd-check5">半袖シャツ</label>
+<div id="5" class="acd-content">
+  <p>
+    {% for closet in short_sleeve_shirt %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+<input id="acd-check6" class="acd-check" type="checkbox" checked="checked">
+<label class="acd-label" for="acd-check6">長袖シャツ</label>
+<div id="6" class="acd-content">
+  <p>
+    {% for closet in long_sleeve_shirt %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+<input id="acd-check7" class="acd-check" type="checkbox" checked="checked">
+<label class="acd-label" for="acd-check7">パーカー(チャックあり)</label>
+<div id="7" class="acd-content">
+  <p>
+    {% for closet in zipper_parker %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+<input id="acd-check8" class="acd-check" type="checkbox" checked="checked">
+<label class="acd-label" for="acd-check8">コート</label>
+<div id="8" class="acd-content">
+  <p>
+    {% for closet in coat %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+<input id="acd-check9" class="acd-check" type="checkbox" checked="checked">
+<label class="acd-label" for="acd-check9">ダウンジャケット</label>
+<div id="9" class="acd-content">
+  <p>
+    {% for closet in down_jacket %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+<input id="acd-check10" class="acd-check" type="checkbox" checked="checked">
+<label class="acd-label" for="acd-check10">半ズボン</label>
+<div id="10" class="acd-content">
+  <p>
+    {% for closet in shorts %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+<input id="acd-check11" class="acd-check" type="checkbox" checked="checked">
+<label class="acd-label" for="acd-check11">長ズボン</label>
+<div id="11" class="acd-content">
+  <p>
+    {% for closet in long_trousers %}
+    <img src={{test}}{{ closet.image }}>
+    {% endfor %}
+  </p>
+</div>
+    <footer>
+      <p>
+        <a href="{% url 'webtestapp:clothes_register' %}"><img src="{% static "images/追加ボタン.png" %}"  alt="追加ボタン" style="widh: 100px;" height="100"></a>
+        <a href="#"><img src="{% static "images/トップボタン.png" %}" alt="トップへ戻る" style="widh: 70px;" height="70"></a>
+      </P>
+      <div id="menu-box" class="menu">
+        <ul>
+          <li><a href="{% url 'webtestapp:calendar' %}">カレンダー</a></li>
+          <li><a href="{% url 'webtestapp:closet' %}">クローゼット</a></li>
+          <li> <a href="{% url 'webtestapp:index' %}">ホーム</a></li>
+          <li><a href="{% url 'webtestapp:timeline' %}">タイムライン</a></li>
+          <li><a href="{% url 'webtestapp:settei' %}">設定</a></li>
+        </ul>
+      </div>
+  </footer>
+  </body>
+</form>
+</html>
+<!--作成者:藤村-->

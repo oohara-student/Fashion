@@ -1,0 +1,56 @@
+{% load static%}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/topic.css" %}"/>
+    <title>topic</title>
+  </head>
+  <header>
+  <h1>topics</h1>
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"></label>
+<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"><span></span></label>
+<div class="drawer-menu">
+  <ul>
+    <li><a href="コーディネート確認.html">コーディネート確認</a></li>
+    <li><a href="お気に入りコーディネート.html">お気に入りコーディネート</a></li>
+    <li><a href="削除したコーディネート.html">削除したコーディネート</a></li>
+    
+  </ul>
+  <a href="{% url 'webtestapp:help' %}"><img src="{% static "images/ガイド.png" %}"  alt="ガイドボタン" style="widh: 150px;" height="150"></a>
+</div>
+<label for="menu-toggle" class="menu-background"></label>
+</header>
+  <form action="#" method="post">
+  <body>
+    <table>
+        <tr><td><img src="{% static "images/トピック画像.jpg" %}"  alt="表示できません" style="widh: 500px;" height="400"></td>
+    <td>&nbsp;</td>
+    <td>トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事
+        トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事
+        トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事
+        トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事
+        トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事
+        トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事
+        トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事トピック記事</td></tr>
+</table>
+<figure> <a href="https://school.o-hara.ac.jp/machida/"><img src="{% static "images/広告大原.jpg" %}"  alt="表示できません" style="widh: 500px;" height="400"></a>
+  <a href="https://twitter.com/machida_oohara"><img src="{% static "images/広告大原2.jfif" %}"  alt="表示できません" style="widh: 500px;" height="300"></a>
+    広告<figure>
+    <footer>
+      <div id="menu-box" class="menu">
+        <ul>
+        <li><a href="カレンダー画面.html">カレンダー</a></li>
+        <li><a href="{% url 'webtestapp:topic' %}">トピック</a></li>
+        <li> <a href="{% url 'webtestapp:closet' %}">クローゼット</a></li>
+        <li><a href="タイムライン画面.html">タイムライン</a></li>
+        <li><a href="{% url 'webtestapp:settei' %}">設定</a></li>
+        </ul>
+      </div>
+  </footer>
+  </body>
+</form>
+</html>
+<!--作成者:藤村-->

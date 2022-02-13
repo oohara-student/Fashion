@@ -1,0 +1,128 @@
+{% load static%}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/calendar.css" %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="{% static 'javascript/calender.js' %}"></script>
+    <title>カレンダー</title>
+  </head>
+  <h1>カレンダー</h1>
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"></label>
+<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"><span></span></label>
+<div class="drawer-menu">
+  <ul>
+    <li><a href="{% url 'webtestapp:code' %}">コーディネート確認</a></li>
+    <li><a href="{% url 'webtestapp:okiniiri' %}">お気に入りコーディネート</a></li>
+    <li><a href="{% url 'webtestapp:sakujo' %}">削除したコーディネート</a></li> 
+  </ul>
+  <a href="{% url 'webtestapp:help' %}"><img src="{% static "images/ガイド.png" %}"  alt="ガイドボタン" style="widh: 150px;" height="150"></a>
+</div>
+<label for="menu-toggle" class="menu-background"></label>
+  <form action="#" method="post">
+  <body>
+    <table>
+      <tr>
+        <td>
+          <div class="calenderbox">
+            <span style="display: block; border: 1px solid #000000 ;background-color:#fff">1日</span>
+            <div class="heart"></div>
+            <img src="{% static "images/tops_0.jpg" %}"  alt="" >
+            <img src="{% static "images/outer_0.jpg" %}"  alt="" >
+            <img src="{% static "images/pants_1.jpg" %}"  alt="" >
+          </div>
+        </td>
+        <td>
+          <div class="calenderbox">
+            <span style="display: block; border: 1px solid #000000 ;background-color:#fff">2日</span>
+            <div class="heart"></div>
+            <img src="{% static "images/1.jpeg" %}"  alt="" >
+            <img src="{% static "images/6.jpg" %}"  alt="" >
+            <img src="{% static "images/3.jpeg" %}"  alt="" >
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td>
+          <div class="calenderbox">
+            <span style="display: block; border: 1px solid #000000 ;background-color:#fff">3日</span>
+            <div class="heart"></div>
+            <img src="{% static "images/top3.jpeg" %}"  alt="" >
+            <img src="{% static "images/pa3.jpeg" %}"  alt="" >
+            <img src="{% static "images/au3.jpeg" %}"  alt="" >
+          </div>
+        </td>
+        <td>
+          <div class="calenderbox">
+            <span style="display: block; border: 1px solid #000000 ;background-color:#fff">4日</span>
+            <div class="heart"></div>
+            <img src="{% static "images/top3.jpeg" %}"  alt="" >
+            <img src="{% static "images/outer_1.jpg" %}"  alt="" >
+            <img src="{% static "images/画像 -20220206-231602-0aac21c0.jpeg" %}"  alt="" >
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <div class="calenderbox">
+            <span style="display: block; border: 1px solid #000000 ;background-color:#fff">5日</span>
+            <div class="heart"></div>
+            <img src="{% static "images/画像 -20220208-004043-2dad36f7.jpeg" %}"  alt="" >
+            <img src="{% static "images/画像 -20220208-004252-3e9053c3.jpeg" %}"  alt="" >
+            <img src="{% static "images/1121019_v01_h1.webp" %}"  alt="" >
+          </div>
+        </td>
+        <td>
+          <div class="calenderbox">
+            <span style="display: block; border: 1px solid #000000 ;background-color:#fff">6日</span>
+            <div class="heart"></div>
+            <img src="{% static "images/画像 -20220208-004421-17735f4a.jpeg" %}"  alt="" >
+            <img src="{% static "images/画像 -20220208-004252-3e9053c3.jpeg" %}"  alt="" >
+            <img src="{% static "images/画像 -20220206-231602-6b936ad2.jpeg" %}"  alt="" >
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <div class="calenderbox">
+            <span style="display: block; border: 1px solid #000000 ;background-color:#fff">7日</span>
+            <div class="heart"></div>
+            <img src="{% static "images/画像 -20220206-231538-8cd9b6c3.jpeg" %}"  alt="" >
+            <img src="{% static "images/pa3.jpeg" %}"  alt="" >
+            <img src="{% static "images/pants_3.jpg" %}"  alt="" >
+          </div>
+        </td>
+        <td>
+          <div class="calenderboxend">
+            <img src="{% static "images/カレンダー.png" %}"  alt="" >
+            <div class="tenki">
+              天気:<span id="weather"></span>
+              気温:<span id="temp"></span>℃
+              <img id="icon">
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div id="menu-box" class="menu">
+      <ul>
+        <li><a href="{% url 'webtestapp:calendar' %}">カレンダー</a></li>
+        <li><a href="{% url 'webtestapp:closet' %}">クローゼット</a></li>
+        <li> <a href="{% url 'webtestapp:index' %}">ホーム</a></li>
+        <li><a href="{% url 'webtestapp:timeline' %}">タイムライン</a></li>
+        <li><a href="{% url 'webtestapp:settei' %}">設定</a></li>
+      </ul>
+    </div>
+  </body>
+</form>
+</html>

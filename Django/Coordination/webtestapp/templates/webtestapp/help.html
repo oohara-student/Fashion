@@ -1,0 +1,128 @@
+{% load static%}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/help.css" %}"/>
+    <title>ヘルプ</title>
+  </head>
+  <h1>ヘルプ</h1>
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"></label>
+<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"><span></span></label>
+<div class="drawer-menu">
+  <ul>
+    <li><a href="{% url 'webtestapp:code' %}">コーディネート確認</a></li>
+    <li><a href="{% url 'webtestapp:okiniiri' %}">お気に入りコーディネート</a></li>
+    <li><a href="{% url 'webtestapp:sakujo' %}">削除したコーディネート</a></li> 
+  </ul>
+  <a href="{% url 'webtestapp:help' %}"><img src="{% static "images/ガイド.png" %}"  alt="ガイドボタン" style="widh: 150px;" height="150"></a>
+</div>
+<label for="menu-toggle" class="menu-background"></label>
+  <form action="#" method="post">
+  <body>
+    <p class="app">こーでねぇ～との使い方</p>
+    <input id="acd-check1" class="acd-check" type="checkbox"  >
+    <label class="acd-label" for="acd-check1">このシステムは</label>
+    <div id="1" class="acd-content">
+      <p class="help1">
+       システムについて。
+      </p>
+    </div>
+    <input id="acd-check2" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check2">ホーム画面について</label>
+    <div id="2" class="acd-content">
+     <p class="help2">
+     ホーム画面の説明
+     </p>
+    </div>
+    <input id="acd-check3" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check3">服の登録について</label>
+    <div id="3" class="acd-content">
+  <p class="help3">
+    服登録の説明
+  </p>
+</div>
+<input id="acd-check4" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check4">コーディネートについて</label>
+    <div id="4" class="acd-content">
+  <p class="help4">
+    コーディネートの説明
+  </p>
+</div>
+<input id="acd-check5" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check5">クローゼットについて</label>
+    <div id="5" class="acd-content">
+  <p class="help5">
+    クローゼットの説明
+  </p>
+</div>
+<input id="acd-check6" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check6">タイムラインについて</label>
+    <div id="6" class="acd-content">
+  <p class="help6">
+    タイムラインの説明
+  </p>
+</div>
+<input id="acd-check7" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check7">カレンダーについて</label>
+    <div id="7" class="acd-content">
+  <p class="help7">
+    カレンダーの説明
+  </p>
+</div>
+<input id="acd-check8" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check8">設定について</label>
+    <div id="8" class="acd-content">
+  <p class="help8">
+    設定の説明
+  </p>
+</div>
+<input id="acd-check9" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check9">コーデについて</label>
+    <div id="9" class="acd-content">
+  <p class="help9">
+    コーデの説明
+  </p>
+</div>
+<input id="acd-check10" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check10">パスワードについて</label>
+    <div id="10" class="acd-content">
+  <p class="help10">
+    ログアウトをした際に再びログインする場合にはメールアドレスとパスワードの入力が必要になりますので
+    パスワードは大切に保管してください。
+
+    パスワードを変更するには<a href="{% url 'webtestapp:passward' %}">こちら</a>からまたは設定画面からパスワード変更の画面に移動し、メールアドレスと現在のパスワード、変更後のパスワードを入力し、変更ボタンを押すとパスワードの変更ができます。
+    その際には入力された内容が正しく入力されているか確認の上、新しいパスワードを大切に保管してください。
+
+    パスワードを忘れた場合は<a href="{% url 'webtestapp:forget' %}">こちら</a>から登録されているアカウントのメールアドレスを入力をして、届いたメールをご確認ください。
+  </p>
+</div>
+  <input id="acd-check11" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check11">その他</label>
+    <div id="11" class="acd-content">
+  <p class="help11">
+    ・項目に知りたい情報がない場合はお問い合わせフォームをご利用ください。
+    
+    ～お問い合わせフォームの使い方～
+    <a href="{% url 'webtestapp:otoi' %}">こちら</a>からまたは設定画面からお問い合わせフォームの画面に移動し、メールアドレスとお問い合わせ内容を入力した後に送信ボタンを押していただくとお問い合わせができます。
+
+    ※入力いただいた内容についてはメールアドレス宛に回答を送信します。
+    また、場合によっては回答にお時間をいただくことがありますので予めご了承ください。
+  </p>
+</div>
+  <footer>
+    <div id="menu-box" class="menu">
+      <ul>
+        <li><a href="{% url 'webtestapp:calendar' %}">カレンダー</a></li>
+        <li><a href="{% url 'webtestapp:closet' %}">クローゼット</a></li>
+        <li> <a href="{% url 'webtestapp:index' %}">ホーム</a></li>
+        <li><a href="{% url 'webtestapp:timeline' %}">タイムライン</a></li>
+        <li><a href="{% url 'webtestapp:settei' %}">設定</a></li>
+      </ul>
+    </div>
+  </footer>
+  </body>
+</form>
+</html>

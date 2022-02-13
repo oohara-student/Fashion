@@ -1,0 +1,74 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>お問い合わせフォーム</title>
+    <style>
+      * { margin: 0px;
+        padding: 0px;
+    }
+       h1{
+        width: 100%;
+        top: 0; 
+        left: 0;
+        padding: 20px 50px;
+        box-sizing: border-box;
+        position: fixed;
+        text-align: center;
+        color: #faf4f4;
+        background-color:rgb(73, 73, 252);
+       }
+      body{
+          padding: 90px 0 70px;
+        background-color:rgb(177, 177, 180)
+      }
+       p{text-align: center}
+       #mailladores{width:400px;
+        border-style:solid;
+        border-color:black;
+        border-width:2px}
+      #otoiawasenaiyou{
+        border-width:2px;
+        border-color:black;
+        resize: none;
+        max-width: 1000px;
+        max-height: 500px;
+        min-width: 100px;
+        min-height: 100px;
+        width:550px;
+        height:400px}
+  #kyannseru{
+    width: 150px;
+    color:ivory;
+    background-color:dimgray}
+  #kyannseru:hover {
+    color:ivory;
+    background-color:rgb(136, 135, 135)
+  }
+  #sousinnbotan{width: 150px;
+    color:ivory;
+    background-color:dimgray}
+  #sousinnbotan:hover {
+    color:ivory;
+    background-color:rgb(136, 135, 135)
+  }
+    </style>
+  </head>
+  <h1>お問い合わせ</h1>
+  <form action="#" method="post">
+  <body>
+    <p>
+      メールアドレス※記入例：example@ayuka.com<br>
+        <input id="mailladores" type="email" required name="mail" pattern=".+@.+\..+" title="メールアドレスは、example@ayuka.com のような形式で記入してください。">
+   </p>
+    <p>
+      お問い合わせ内容<br><textarea id=otoiawasenaiyou required name="otoiawase" ></textarea>
+    </p>
+    <p>
+      <input id="kyannseru" type="button" onclick="history.back()" value="キャンセル">
+      <input id="sousinnbotan" type="submit" value="送信">
+    </p>
+    </form>
+</body>
+</html>
+<!--作成者:藤村-->

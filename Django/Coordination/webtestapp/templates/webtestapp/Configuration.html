@@ -1,0 +1,45 @@
+{% load static%}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/Configuration.css" %}"/>
+    <title>設定画面</title>
+  </head>
+  <h1>設定</h1>
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"></label>
+<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"><span></span></label>
+<div class="drawer-menu">
+  <ul>
+    <li><a href="{% url 'webtestapp:code' %}">コーディネート確認</a></li>
+    <li><a href="{% url 'webtestapp:okiniiri' %}">お気に入りコーディネート</a></li>
+    <li><a href="{% url 'webtestapp:sakujo' %}">削除したコーディネート</a></li> 
+  </ul>
+  <a href="{% url 'webtestapp:help' %}"><img src="{% static "images/ガイド.png" %}"  alt="ガイドボタン" style="widh: 150px;" height="150"></a>
+</div>
+<label for="menu-toggle" class="menu-background"></label>
+  <form action="#" method="post">
+  <body>
+    <div id="settei-page" class="settei-menu">
+      <ul>
+        <li><a href="{% url 'webtestapp:passward' %}">パスワード変更</a></li>
+        <li><a href="{% url 'webtestapp:honnninntoruroku' %}">本人登録情報</a></li>
+        <li><a href="{% url 'webtestapp:otoi' %}">お問い合わせフォーム</a></li>
+        <li><a href="{% url 'webtestapp:riyou' %}">利用規約</a></li>
+      </ul>
+      <p><a href="ログイン.html">ログアウト</a></p>
+    </div>
+    <div id="menu-box" class="menu">
+      <ul>
+        <li><a href="{% url 'webtestapp:calendar' %}">カレンダー</a></li>
+        <li><a href="{% url 'webtestapp:closet' %}">クローゼット</a></li>
+        <li> <a href="{% url 'webtestapp:index' %}">ホーム</a></li>
+        <li><a href="{% url 'webtestapp:timeline' %}">タイムライン</a></li>
+        <li><a href="{% url 'webtestapp:settei' %}">設定</a></li>
+      </ul>
+    </div>
+  </body>
+</form>
+</html>

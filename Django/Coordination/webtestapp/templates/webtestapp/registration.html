@@ -1,0 +1,273 @@
+{% load static%}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/registration.css" %}"/>
+    <title>本人登録情報</title>
+  </head>
+  <h1>本人登録情報</h1>
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"></label>
+<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+<label for="menu-toggle" class="menu-button"><span></span></label>
+<div class="drawer-menu">
+  <ul>
+    <li><a href="{% url 'webtestapp:code' %}">コーディネート確認</a></li>
+    <li><a href="{% url 'webtestapp:okiniiri' %}">お気に入りコーディネート</a></li>
+    <li><a href="{% url 'webtestapp:sakujo' %}">削除したコーディネート</a></li> 
+  </ul>
+  <a href="{% url 'webtestapp:help' %}"><img src="{% static "images/ガイド.png" %}"  alt="ガイドボタン" style="widh: 150px;" height="150"></a>
+</div>
+<label for="menu-toggle" class="menu-background"></label>
+  <form action="#" method="post">
+  <body>
+  <div class="kakuninn"> 
+    <p>ニックネーム
+        <span>(最大15文字)</span><br>
+      <input type="text" id=nickname name="name" placeholder="ニックネームを入力してください">
+    </p><br>
+    <p>性別<br>
+        <select id=seibetuselect name="seibetu">
+            <option value="otoko">男性</option>
+            <option value="onnna">女性</option>
+          </select>
+    </p><br>
+    <p>
+        身長<br>
+          <select id=sinntyou name="sinntyou">
+            <option value=" 120 "> 120 cm</option>
+            <option value=" 121 "> 121 cm</option>
+            <option value=" 122 "> 122 cm</option>
+            <option value=" 123 "> 123 cm</option>
+            <option value=" 124 "> 124 cm</option>
+            <option value=" 125 "> 125 cm</option>
+            <option value=" 126 "> 126 cm</option>
+            <option value=" 127 "> 127 cm</option>
+            <option value=" 128 "> 128 cm</option>
+            <option value=" 129 "> 129 cm</option>
+            <option value=" 130 "> 130 cm</option>
+            <option value=" 131 "> 131 cm</option>
+            <option value=" 132 "> 132 cm</option>
+            <option value=" 133 "> 133 cm</option>
+            <option value=" 134 "> 134 cm</option>
+            <option value=" 135 "> 135 cm</option>
+            <option value=" 136 "> 136 cm</option>
+            <option value=" 137 "> 137 cm</option>
+            <option value=" 138 "> 138 cm</option>
+            <option value=" 139 "> 139 cm</option>
+            <option value=" 140 "> 140 cm</option>
+            <option value=" 141 "> 141 cm</option>
+            <option value=" 142 "> 142 cm</option>
+            <option value=" 143 "> 143 cm</option>
+            <option value=" 144 "> 144 cm</option>
+            <option value=" 145 "> 145 cm</option>
+            <option value=" 146 "> 146 cm</option>
+            <option value=" 147 "> 147 cm</option>
+            <option value=" 148 "> 148 cm</option>
+            <option value=" 149 "> 149 cm</option>
+            <option value=" 150 "> 150 cm</option>
+            <option value=" 151 "> 151 cm</option>
+            <option value=" 152 "> 152 cm</option>
+            <option value=" 153 "> 153 cm</option>
+            <option value=" 154 "> 154 cm</option>
+            <option value=" 155 "selected> 155 cm</option>
+            <option value=" 156 "> 156 cm</option>
+            <option value=" 157 "> 157 cm</option>
+            <option value=" 158 "> 158 cm</option>
+            <option value=" 159 "> 159 cm</option>
+            <option value=" 160 "> 160 cm</option>
+            <option value=" 161 "> 161 cm</option>
+            <option value=" 162 "> 162 cm</option>
+            <option value=" 163 "> 163 cm</option>
+            <option value=" 164 "> 164 cm</option>
+            <option value=" 165 "> 165 cm</option>
+            <option value=" 166 "> 166 cm</option>
+            <option value=" 167 "> 167 cm</option>
+            <option value=" 168 "> 168 cm</option>
+            <option value=" 169 "> 169 cm</option>
+            <option value=" 170 "> 170 cm</option>
+            <option value=" 171 "> 171 cm</option>
+            <option value=" 172 "> 172 cm</option>
+            <option value=" 173 "> 173 cm</option>
+            <option value=" 174 "> 174 cm</option>
+            <option value=" 175 "> 175 cm</option>
+            <option value=" 176 "> 176 cm</option>
+            <option value=" 177 "> 177 cm</option>
+            <option value=" 178 "> 178 cm</option>
+            <option value=" 179 "> 179 cm</option>
+            <option value=" 180 "> 180 cm</option>
+            <option value=" 181 "> 181 cm</option>
+            <option value=" 182 "> 182 cm</option>
+            <option value=" 183 "> 183 cm</option>
+            <option value=" 184 "> 184 cm</option>
+            <option value=" 185 "> 185 cm</option>
+            <option value=" 186 "> 186 cm</option>
+            <option value=" 187 "> 187 cm</option>
+            <option value=" 188 "> 188 cm</option>
+            <option value=" 189 "> 189 cm</option>
+            <option value=" 190 "> 190 cm</option>
+            <option value=" 191 "> 191 cm</option>
+            <option value=" 192 "> 192 cm</option>
+            <option value=" 193 "> 193 cm</option>
+            <option value=" 194 "> 194 cm</option>
+            <option value=" 195 "> 195 cm</option>
+            <option value=" 196 "> 196 cm</option>
+            <option value=" 197 "> 197 cm</option>
+            <option value=" 198 "> 198 cm</option>
+            <option value=" 199 "> 199 cm</option>
+            <option value=" 200 "> 200 cm</option>
+          </select>
+      </p><br>
+      <p>
+        体型<br>
+          <select id=taikei name="taikei">
+              <option value="hosome">細め</option>
+              <option value="yayahosome">やや細め</option>
+              <option value="hutuu" selected>普通</option>
+              <option value="yayahutorigimi">やや太り気味</option>
+              <option value="hutorigimi">太り気味</option>
+          </select>
+      </p><br>
+    <p>生年月日<br>
+        <select id=nenselect name="year">
+          <option value="1950">1950</option>
+          <option value="1951">1951</option>
+          <option value="1952">1952</option>
+          <option value="1953">1953</option>
+          <option value="1954">1954</option>
+          <option value="1955">1955</option>
+          <option value="1956">1956</option>
+          <option value="1957">1957</option>
+          <option value="1958">1958</option>
+          <option value="1959">1959</option>
+          <option value="1960">1960</option>
+          <option value="1961">1961</option>
+          <option value="1962">1962</option>
+          <option value="1963">1963</option>
+          <option value="1964">1964</option>
+          <option value="1965">1965</option>
+          <option value="1966">1966</option>
+          <option value="1967">1967</option>
+          <option value="1968">1968</option>
+          <option value="1969">1969</option>
+          <option value="1970">1970</option>
+          <option value="1971">1971</option>
+          <option value="1972">1972</option>
+          <option value="1973">1973</option>
+          <option value="1974">1974</option>
+          <option value="1975">1975</option>
+          <option value="1976">1976</option>
+          <option value="1977">1977</option>
+          <option value="1978">1978</option>
+          <option value="1979">1979</option>
+          <option value="1980">1980</option>
+          <option value="1981">1981</option>
+          <option value="1982">1982</option>
+          <option value="1983">1983</option>
+          <option value="1984">1984</option>
+          <option value="1985">1985</option>
+          <option value="1986">1986</option>
+          <option value="1987">1987</option>
+          <option value="1988">1988</option>
+          <option value="1989">1989</option>
+          <option value="1990">1990</option>
+          <option value="1991">1991</option>
+          <option value="1992">1992</option>
+          <option value="1993">1993</option>
+          <option value="1994">1994</option>
+          <option value="1995">1995</option>
+          <option value="1996">1996</option>
+          <option value="1997">1997</option>
+          <option value="1998">1998</option>
+          <option value="1999">1999</option>
+          <option value="2000">2000</option>
+          <option value="2001"selected>2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          </select>年
+        <select id=tukiselect name="month">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          </select>月
+          <select id=hinitiselect name="day">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            </select>日
+      </p>
+    <p>
+      <input id="setteigamen" type="button" onclick="history.back()" value="設定画面に戻る">
+      <input id="hennkou" type="submit" value="変更" onclick="henkouclick()">
+    </p>
+  </div>
+</form>
+    <div id="menu-box" class="menu">
+      <ul>
+        <li><a href="{% url 'webtestapp:calendar' %}">カレンダー</a></li>
+        <li><a href="{% url 'webtestapp:closet' %}">クローゼット</a></li>
+        <li><a href="{% url 'webtestapp:index' %}">ホーム</a></li>
+        <li><a href="{% url 'webtestapp:timeline' %}">タイムライン</a></li>
+        <li><a href="{% url 'webtestapp:settei' %}">設定</a></li>
+      </ul>
+    </div>
+  </body>
+</form>
+</html>
